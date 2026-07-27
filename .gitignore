@@ -12,7 +12,7 @@ dist-ssr
 *.local
 
 .vscode/*
-!.vscode/extensions.json
+!.vscode/extensions.json 
 .idea
 .DS_Store
 *.suo
