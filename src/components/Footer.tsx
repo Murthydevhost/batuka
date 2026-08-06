@@ -10,25 +10,20 @@ const QUICK_LINKS = [
 ];
 
 const PROJECT_LINKS = [
-  { label: 'Batuka Greens', href: '#projects' },
-  { label: 'Batuka Villas — Serenity', href: '#projects' },
-  { label: 'Batuka Lakeview', href: '#projects' },
+  { label: 'Batuka HSR Layout', href: '#projects' },
+  { label: 'Batuka Sadashiv Nagar', href: '#projects' },
+  { label: 'Batuka Basaveshwaranagar', href: '#projects' },
 ];
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0a2e21] text-white/80 pt-16 pb-8">
+    <footer className="bg-[#0B322D] text-white/80 pt-16 pb-8">
       <div className="container-x">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2.5 mb-4">
-              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-green text-white">
-                <Home size={20} />
-              </span>
-              <span className="font-bold text-xl text-white">
-                Batuka<span className="text-brand-gold"> Properties</span>
-              </span>
+              <img src={new URL('../../assets/companyLogo1.png', import.meta.url).href} alt="Batuka Properties" className="h-20 w-auto" />
             </div>
             <p className="text-sm leading-relaxed text-white/60 mb-5">
               Building premium plots & luxury villas with trust, transparency, and
@@ -82,15 +77,15 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-sm text-white/60">
                 <Phone size={16} className="text-brand-gold mt-0.5" />
-                <a href="tel:+919844829019" className="hover:text-brand-gold transition-colors">+91 91136 74869</a>
+                <a href="tel:+919844829019" className="hover:text-brand-gold transition-colors">+91 9108809019</a>
               </li>
               <li className="flex items-start gap-3 text-sm text-white/60">
                 <Mail size={16} className="text-brand-gold mt-0.5" />
-                <a href="mailto:contact@batukaproperties.com" className="hover:text-brand-gold transition-colors break-all">contact@batukaproperties.com</a>
+                <a href="mailto:info@batuka91.in" className="hover:text-brand-gold transition-colors break-all">info@batuka91.in</a>
               </li>
               <li className="flex items-start gap-3 text-sm text-white/60">
                 <MapPin size={16} className="text-brand-gold mt-0.5" />
-                <span>Bangalore, Karnataka, India</span>
+                <span>$14/1(Old #139/B,) 10th Main, Sadashivanagar, RMV Extension, Aramane Nagar,Bengaluru-560080</span>
               </li>
             </ul>
             <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="btn-gold mt-6">

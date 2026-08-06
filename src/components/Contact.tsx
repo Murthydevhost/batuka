@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Send, MessageCircle } from 'lucide-react';
+import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
 import { useInView } from '@/hooks/useInView';
 import { WHATSAPP_LINK } from '@/lib/constants';
 
@@ -12,7 +12,7 @@ export default function Contact() {
   const { ref, inView } = useInView<HTMLDivElement>();
 
   return (
-    <section id="contact" className="section-y bg-brand-green-dark relative overflow-hidden">
+    <section id="contact" ref={ref} className="section-y bg-brand-green-dark relative overflow-hidden">
       {/* Decorative gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-brand-green-dark via-brand-green to-brand-green-dark opacity-95" />
       <div className="absolute top-0 right-0 w-96 h-96 bg-brand-gold/10 rounded-full blur-3xl" />

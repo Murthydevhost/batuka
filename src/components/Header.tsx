@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react';
-import { Menu, X, Home } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { WHATSAPP_LINK } from '@/lib/constants';
+
+const companyLogo = new URL('../../assets/companyLogo.png', import.meta.url).href;
+const companyLogoWhite = new URL('../../assets/companyLogo1.png', import.meta.url).href;
 
 const NAV_LINKS = [
   { label: 'Home', href: '#home' },
@@ -20,39 +23,36 @@ export default function Header() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  const scrollToSection = (hash: string) => {
+    const id = hash.startsWith('#') ? hash.slice(1) : hash;
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+    setOpen(false);
+  };
+
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-lg shadow-black/5 py-3'
-          : 'bg-transparent py-5'
-      }`}
-    >
-      <div className="container-x flex items-center justify-between">
-        <a href="#home" className="flex items-center gap-2.5 group">
-          <span
-            className={`flex h-10 w-10 items-center justify-center rounded-xl bg-brand-green text-white transition-transform duration-300 group-hover:scale-110 ${
-              scrolled ? '' : 'bg-white/15 backdrop-blur-sm'
-            }`}
-          >
-            <Home size={20} />
-          </span>
-          <span className={`font-bold text-xl tracking-tight ${scrolled ? 'text-brand-green' : 'text-white'}`}>
-            Batuka<span className="text-brand-gold"> Properties</span>
-          </span>
+    <header className={`site-header ${scrolled ? 'site-header--scrolled' : ''}`}>
+      <div className="site-header__inner">
+        <a href="#home" className="site-header__brand">
+          <img
+            src={scrolled ? companyLogoWhite : companyLogo}
+            alt="Batuka Properties"
+            className="site-header__logo"
+          />
         </a>
 
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="site-header__nav">
           {NAV_LINKS.map((link) => (
-            <a
+            <button
               key={link.href}
-              href={link.href}
-              className={`text-sm font-medium transition-colors duration-300 hover:text-brand-gold ${
-                scrolled ? 'text-gray-700' : 'text-white/90'
-              }`}
+              type="button"
+              onClick={() => scrollToSection(link.href)}
+              className={`site-header__link ${scrolled ? 'site-header__link--scrolled' : ''}`}
             >
               {link.label}
-            </a>
+            </button>
           ))}
         </nav>
 
@@ -60,14 +60,14 @@ export default function Header() {
           href={WHATSAPP_LINK}
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden md:inline-flex btn-gold"
+          className="btn-gold site-header__cta"
         >
           Enquire Now
         </a>
 
         <button
           onClick={() => setOpen(!open)}
-          className={`md:hidden p-2 rounded-lg transition-colors ${scrolled ? 'text-brand-green' : 'text-white'}`}
+          className={`site-header__toggle ${scrolled ? 'site-header__toggle--scrolled' : ''}`}
           aria-label="Toggle menu"
         >
           {open ? <X size={24} /> : <Menu size={24} />}
@@ -75,27 +75,23 @@ export default function Header() {
       </div>
 
       {/* Mobile menu */}
-      <div
-        className={`md:hidden overflow-hidden transition-all duration-500 ${
-          open ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-        }`}
-      >
-        <div className="container-x py-4 flex flex-col gap-1 bg-white/98 backdrop-blur-md mt-3 rounded-2xl shadow-xl">
+      <div className={`mobile-menu ${open ? 'mobile-menu--open' : ''}`}>
+        <div className="mobile-menu__panel">
           {NAV_LINKS.map((link) => (
-            <a
+            <button
               key={link.href}
-              href={link.href}
-              onClick={() => setOpen(false)}
-              className="px-4 py-3 rounded-lg text-gray-700 font-medium hover:bg-brand-light hover:text-brand-green transition-colors"
+              type="button"
+              onClick={() => scrollToSection(link.href)}
+              className="mobile-menu__link"
             >
               {link.label}
-            </a>
+            </button>
           ))}
           <a
             href={WHATSAPP_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-gold mt-2"
+            className="btn-gold mobile-menu__cta"
           >
             Enquire Now
           </a>

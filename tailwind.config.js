@@ -7,13 +7,14 @@ export default {
         brand: {
           green: '#0f5d3f',
           'green-dark': '#0b3f2d',
+          logo: '#012a21',
           light: '#f5f8f6',
           gold: '#d4af37',
           'gold-dark': '#b8932e',
         },
       },
       fontFamily: {
-        sans: ['Poppins', 'sans-serif'],
+        sans: ['Cinzel', 'serif'],
       },
       maxWidth: {
         content: '1280px',

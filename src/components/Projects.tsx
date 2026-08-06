@@ -15,8 +15,8 @@ type Project = {
 
 const PROJECTS: Project[] = [
   {
-    name: 'Batuka Greens',
-    location: 'Sarjapur Road, Bangalore',
+    name: 'Batuka HSR Layout',
+    location: 'HSR Layout, Bangalore',
     type: 'Premium Residential Plots',
     area: '1200 - 2400 sq.ft',
     image: 'https://images.pexels.com/photos/1029599/pexels-photo-1029599.jpeg?auto=compress&cs=tinysrgb&w=1200',
@@ -24,8 +24,8 @@ const PROJECTS: Project[] = [
     status: 'Selling Fast',
   },
   {
-    name: 'Batuka Villas — Serenity',
-    location: 'Devanahalli, Bangalore',
+    name: 'Batuka Sadashiv Nagar',
+    location: 'Sadashiv Nagar, Bangalore',
     type: 'Luxury Villas',
     area: '3 & 4 BHK',
     image: 'https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1200',
@@ -33,8 +33,8 @@ const PROJECTS: Project[] = [
     status: 'New Launch',
   },
   {
-    name: 'Batuka Lakeview',
-    location: 'Hoskote, Bangalore',
+    name: 'Batuka Basaveshwaranagar',
+    location: 'Basaveshwaranagar, Bangalore',
     type: 'Lakefront Plots',
     area: '1500 - 3000 sq.ft',
     image: 'https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1200',
@@ -51,7 +51,7 @@ export default function Projects() {
     <section id="projects" className="section-y bg-brand-light">
       <div className="container-x">
         <div className="text-center max-w-2xl mx-auto mb-14">
-          <p className="text-brand-gold font-semibold text-sm tracking-widest mb-3">OUR PROJECTS</p>
+          <p className="text-brand-gold font-semibold text-sm tracking-widest mb-3">OUR UPCOMING PROJECTS</p>
           <h2 className="section-title">Explore Our Developments</h2>
           <p className="section-subtitle">
             Each Batuka project is a testament to thoughtful planning, premium

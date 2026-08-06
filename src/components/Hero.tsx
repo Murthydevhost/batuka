@@ -8,7 +8,7 @@ export default function Hero() {
       className="relative min-h-screen flex items-center overflow-hidden"
     >
       {/* Background */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 bg-brand-logo">
         <img
           src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1920"
           alt="Luxury property"
