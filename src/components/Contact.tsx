@@ -1,4 +1,5 @@
-import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
+import { Phone, Mail, MapPin } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa';
 import { useInView } from '@/hooks/useInView';
 import { WHATSAPP_LINK } from '@/lib/constants';
 
@@ -54,7 +55,7 @@ export default function Contact() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 mt-8 bg-[#25D366] text-white font-semibold rounded-full px-6 py-3.5 hover:bg-[#1ebe5d] transition-all hover:-translate-y-0.5"
             >
-              <MessageCircle size={18} /> Chat on WhatsApp
+              <FaWhatsapp size={18} /> Chat on WhatsApp
             </a>
           </div>
 

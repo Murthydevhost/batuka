@@ -121,7 +121,7 @@ export default function Projects() {
                 </div>
 
                 <a
-                  href={WHATSAPP_LINK}
+                  href="mailto:info@batuka91.in" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-gold"

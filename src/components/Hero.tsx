@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center overflow-hidden"
+      className="relative h-screen flex items-center overflow-hidden"
     >
       {/* Background */}
       <div className="absolute inset-0 bg-brand-logo">
@@ -66,7 +66,7 @@ export default function Hero() {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-6 mt-16 max-w-lg animate-fade-up" style={{ animationDelay: '1.45s', opacity: 0 }}>
+          <div className="grid grid-cols-3 gap-6 mt-8 mb-8 max-w-lg animate-fade-up" style={{ animationDelay: '1.45s', opacity: 0 }}>
             {[
               { value: '5+', label: 'Projects Delivered' },
               { value: '100+', label: 'Happy Families' },

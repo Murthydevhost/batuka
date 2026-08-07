@@ -13,6 +13,8 @@ body {
   color: #222;
   background: #ffffff;
   text-transform:lowercase;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 @layer components {
@@ -91,6 +93,9 @@ body {
     gap: 2rem;
   }
   @media (min-width: 768px) {
+    body {
+      width: 100%;
+    }
     .site-header__nav {
       display: flex;
     }

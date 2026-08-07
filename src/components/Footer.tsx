@@ -18,7 +18,7 @@ const PROJECT_LINKS = [
 export default function Footer() {
   return (
     <footer id="footer" className="bg-[#0B322D] text-white/80 pt-16 pb-8">
-      <div className="container-x">
+      <div className="container-x pl-[5%] md:pl-0">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
           <div>
@@ -88,7 +88,7 @@ export default function Footer() {
                 <span>$14/1(Old #139/B,) 10th Main, Sadashivanagar, RMV Extension, Aramane Nagar,Bengaluru-560080</span>
               </li>
             </ul>
-            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="btn-gold mt-6">
+            <a href="mailto:info@batuka91.in" className="btn-gold mt-6">
               Enquire Now
             </a>
           </div>

@@ -57,7 +57,7 @@ export default function Header() {
         </nav>
 
         <a
-          href={WHATSAPP_LINK}
+          href="mailto:info@batuka91.in" 
           target="_blank"
           rel="noopener noreferrer"
           className="btn-gold site-header__cta"
@@ -88,7 +88,7 @@ export default function Header() {
             </button>
           ))}
           <a
-            href={WHATSAPP_LINK}
+            href="mailto:info@batuka91.in" 
             target="_blank"
             rel="noopener noreferrer"
             className="btn-gold mobile-menu__cta"
