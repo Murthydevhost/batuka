@@ -18,7 +18,7 @@ function App() {
       </main>
       <Footer />
       <WhatsAppFloat />
-    </div>
+    </div> 
   );
 }
 
