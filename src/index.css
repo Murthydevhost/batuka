@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@300;400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -12,6 +12,7 @@ body {
   font-family: 'Cinzel', serif;
   color: #222;
   background: #ffffff;
+  text-transform:lowercase;
 }
 
 @layer components {
@@ -25,13 +26,16 @@ body {
     @apply inline-flex items-center justify-center gap-2 rounded-full px-8 py-3.5 text-sm font-semibold tracking-wide transition-all duration-300;
   }
   .btn-primary {
-    @apply btn bg-brand-green text-white hover:bg-brand-green-dark hover:shadow-xl hover:shadow-brand-green/30 hover:-translate-y-0.5;
+    @apply btn text-white hover:shadow-xl hover:shadow-brand-green/30 hover:-translate-y-0.5;
+    background: linear-gradient(135deg, #0f5d3f 0%, #0b3f2d 100%);
   }
   .btn-secondary {
     @apply btn border-2 border-white text-white hover:bg-white hover:text-brand-green-dark hover:-translate-y-0.5;
+    background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.04) 100%);
   }
   .btn-gold {
-    @apply btn bg-brand-gold text-brand-green-dark hover:bg-brand-gold-dark hover:text-white hover:-translate-y-0.5;
+    @apply btn text-brand-green-dark hover:bg-brand-gold-dark hover:text-white hover:-translate-y-0.5;
+    background: linear-gradient(135deg, #f0e0ad 0%, #fdbb05 100%);
   }
   .site-header {
     
@@ -41,36 +45,42 @@ body {
     transition: all 0.5s;
   }
   .site-header--scrolled {
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: #0b322d;
     backdrop-filter: blur(16px);
     box-shadow: 0 24px 48px rgba(0, 0, 0, 0.08);
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
   }
   .site-header__inner {
-    margin: 0 1rem 0 1rem;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.25rem 1rem;
+    min-height: 70px;
+    box-sizing: border-box;
+    line-height: 1;
   }
   .site-header__brand {
     display: inline-flex;
+    align-items: center;
     isolation: isolate;
+    height: 70px;
+    width: auto;
+    flex-shrink: 0;
   }
   .site-header__logo {
     height: 100px;
     width: auto;
-    max-width: 300px;
-   
-    
+    max-width: 280px;
     object-fit: contain;
-    transition: transform 0.3s, mix-blend-mode 0.3s;
-    mix-blend-mode: multiply;
+    transition: transform 0.3s;
     background: transparent;
     display: block;
-  }
-  .site-header--scrolled .site-header__logo {
-    mix-blend-mode: normal;
+    padding: 0.25rem;
+    border-radius: 0.5rem;
+    margin-top: 0;
   }
   .site-header__brand:hover .site-header__logo {
     transform: scale(1);
@@ -84,6 +94,9 @@ body {
     .site-header__nav {
       display: flex;
     }
+    .site-header__inner {
+      padding: 0 1rem;
+    }
   }
   .site-header__link {
     font-size: 0.875rem;
@@ -95,10 +108,14 @@ body {
     color: #d4af37;
   }
   .site-header__link--scrolled {
-    color: #4b5563;
+    color: rgba(255, 255, 255, 0.9);
   }
   .site-header__cta {
     display: none;
+    height: 44px;
+    line-height: 1;
+    padding-top: 0;
+    padding-bottom: 0;
   }
   @media (min-width: 768px) {
     .site-header__cta {
@@ -118,7 +135,7 @@ body {
     }
   }
   .site-header__toggle--scrolled {
-    color: #0f5d3f;
+    color: #ffffff;
   }
   .mobile-menu {
     max-height: 0;

@@ -39,7 +39,7 @@ export default function Hero() {
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6 animate-fade-in">
             <MapPin size={14} className="text-brand-gold" />
             <span className="text-white/90 text-xs font-medium tracking-wide">
-              PREMIUM REAL ESTATE DEVELOPER
+              Premium Real Estate Developer
             </span>
           </div>
 
@@ -49,7 +49,7 @@ export default function Hero() {
             & <span className="text-brand-gold">Luxury Villas</span>
           </h1>
 
-          <p className="text-lg text-white/85 mb-8 max-w-xl leading-relaxed animate-fade-up" style={{ animationDelay: '0.15s', opacity: 0 }}>
+          <p className="text-md text-white/85 mb-8 max-w-xl leading-relaxed animate-fade-up" style={{ animationDelay: '0.15s', opacity: 0 }}>
             At Batuka Properties, we turn land into legacy. Thoughtfully planned
             plots and exquisitely crafted villas — designed for a life of
             distinction.
@@ -66,7 +66,7 @@ export default function Hero() {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-6 mt-16 max-w-lg animate-fade-up" style={{ animationDelay: '0.45s', opacity: 0 }}>
+          <div className="grid grid-cols-3 gap-6 mt-16 max-w-lg animate-fade-up" style={{ animationDelay: '1.45s', opacity: 0 }}>
             {[
               { value: '5+', label: 'Projects Delivered' },
               { value: '100+', label: 'Happy Families' },
@@ -74,7 +74,7 @@ export default function Hero() {
             ].map((s) => (
               <div key={s.label}>
                 <p className="text-3xl font-bold text-brand-gold">{s.value}</p>
-                <p className="text-white/70 text-xs mt-1">{s.label}</p>
+                <p className="text-white/70 text-xs mt-2 leading-relaxed">{s.label}</p>
               </div>
             ))}
           </div>

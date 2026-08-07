@@ -3,8 +3,8 @@ import { useInView } from '@/hooks/useInView';
 import { WHATSAPP_LINK } from '@/lib/constants';
 
 const CONTACT_INFO = [
-  { icon: Phone, label: 'Call Us', value: '+91 91136 74869', href: 'tel:+919844829019' },
-  { icon: Mail, label: 'Email Us', value: 'contact@batukaproperties.com', href: 'mailto:contact@batukaproperties.com' },
+  { icon: Phone, label: 'Call Us', value: '919108809019', href: 'tel:+919108809019' },
+  { icon: Mail, label: 'Email Us', value: 'info@batuka91.in', href: 'mailto:info@batuka91.in' },
   { icon: MapPin, label: 'Visit Us', value: 'Bangalore, Karnataka, India', href: '#contact' },
 ];
 
@@ -21,7 +21,7 @@ export default function Contact() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left: info */}
           <div className={`text-white transition-all duration-1000 ${inView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-            <p className="text-brand-gold font-semibold text-sm tracking-widest mb-3">GET IN TOUCH</p>
+            <p className="text-brand-gold font-semibold text-sm tracking-widest mb-3">Get in Touch</p>
             <h2 className="text-3xl md:text-4xl font-bold mb-5">
               Let's Build Your Future, Together
             </h2>
@@ -41,7 +41,7 @@ export default function Contact() {
                     <c.icon size={22} />
                   </span>
                   <div>
-                    <p className="text-white/60 text-xs uppercase tracking-wide">{c.label}</p>
+                    <p className="text-white/60 text-xs tracking-wide">{c.label}</p>
                     <p className="text-white font-medium">{c.value}</p>
                   </div>
                 </a>

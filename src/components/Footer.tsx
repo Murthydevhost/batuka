@@ -6,7 +6,7 @@ const QUICK_LINKS = [
   { label: 'About', href: '#about' },
   { label: 'Projects', href: '#projects' },
   { label: 'Why Us', href: '#why-us' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Contact', href: '#footer' },
 ];
 
 const PROJECT_LINKS = [
@@ -17,13 +17,13 @@ const PROJECT_LINKS = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0B322D] text-white/80 pt-16 pb-8">
+    <footer id="footer" className="bg-[#0B322D] text-white/80 pt-16 pb-8">
       <div className="container-x">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2.5 mb-4">
-              <img src={new URL('../../assets/companyLogo1.png', import.meta.url).href} alt="Batuka Properties" className="h-20 w-auto" />
+              <img src={new URL('../../assets/companyLogo.png', import.meta.url).href} alt="Batuka Properties" className="h-24 w-auto" />
             </div>
             <p className="text-sm leading-relaxed text-white/60 mb-5">
               Building premium plots & luxury villas with trust, transparency, and
@@ -77,7 +77,7 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-sm text-white/60">
                 <Phone size={16} className="text-brand-gold mt-0.5" />
-                <a href="tel:+919844829019" className="hover:text-brand-gold transition-colors">+91 9108809019</a>
+                <a href="tel:+919108809019" className="hover:text-brand-gold transition-colors">+91 9108809019</a>
               </li>
               <li className="flex items-start gap-3 text-sm text-white/60">
                 <Mail size={16} className="text-brand-gold mt-0.5" />

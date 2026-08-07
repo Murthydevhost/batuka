@@ -51,7 +51,7 @@ export default function Projects() {
     <section id="projects" className="section-y bg-brand-light">
       <div className="container-x">
         <div className="text-center max-w-2xl mx-auto mb-14">
-          <p className="text-brand-gold font-semibold text-sm tracking-widest mb-3">OUR UPCOMING PROJECTS</p>
+          <p className="text-brand-gold font-semibold text-sm tracking-widest mb-3">Our Upcoming Projects</p>
           <h2 className="section-title">Explore Our Developments</h2>
           <p className="section-subtitle">
             Each Batuka project is a testament to thoughtful planning, premium
@@ -74,7 +74,7 @@ export default function Projects() {
               >
                 <div className="flex items-center justify-between">
                   <div>
-                    <span className="text-xs font-semibold text-brand-gold uppercase tracking-wide">{p.type}</span>
+                    <span className="text-xs font-semibold text-brand-gold tracking-wide">{p.type}</span>
                     <h3 className="text-lg font-bold text-brand-green mt-0.5">{p.name}</h3>
                     <p className="text-gray-500 text-sm flex items-center gap-1 mt-1">
                       <MapPin size={13} /> {p.location}

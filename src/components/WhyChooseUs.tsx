@@ -45,7 +45,7 @@ export default function WhyChooseUs() {
 
       <div className="container-x relative">
         <div className="text-center max-w-2xl mx-auto mb-14">
-          <p className="text-brand-gold font-semibold text-sm tracking-widest mb-3">WHY CHOOSE US</p>
+          <p className="text-brand-gold font-semibold text-sm tracking-widest mb-3">Why Choose Us</p>
           <h2 className="section-title">The Batuka Advantage</h2>
           <p className="section-subtitle">
             Six reasons families and investors trust Batuka Properties with their

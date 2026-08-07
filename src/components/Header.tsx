@@ -3,14 +3,13 @@ import { Menu, X } from 'lucide-react';
 import { WHATSAPP_LINK } from '@/lib/constants';
 
 const companyLogo = new URL('../../assets/companyLogo.png', import.meta.url).href;
-const companyLogoWhite = new URL('../../assets/companyLogo1.png', import.meta.url).href;
 
 const NAV_LINKS = [
   { label: 'Home', href: '#home' },
   { label: 'About', href: '#about' },
   { label: 'Projects', href: '#projects' },
   { label: 'Why Us', href: '#why-us' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Contact', href: '#footer' },
 ];
 
 export default function Header() {
@@ -35,9 +34,10 @@ export default function Header() {
   return (
     <header className={`site-header ${scrolled ? 'site-header--scrolled' : ''}`}>
       <div className="site-header__inner">
+        
         <a href="#home" className="site-header__brand">
           <img
-            src={scrolled ? companyLogoWhite : companyLogo}
+            src={companyLogo}
             alt="Batuka Properties"
             className="site-header__logo"
           />

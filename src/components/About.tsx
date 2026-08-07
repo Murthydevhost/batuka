@@ -53,7 +53,7 @@ export default function About() {
 
           {/* Text side */}
           <div className={`transition-all duration-1000 delay-150 ${inView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-            <p className="text-brand-gold font-semibold text-sm tracking-widest mb-3">ABOUT BATUKA PROPERTIES</p>
+            <p className="text-brand-gold font-semibold text-sm tracking-widest mb-3">About Batuka Properties</p>
             <h2 className="section-title">Crafting Spaces, Building Trust</h2>
             <p className="section-subtitle mb-8">
               Batuka Properties was founded with a singular vision: to redefine real
