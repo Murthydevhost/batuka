@@ -12,7 +12,7 @@ body {
   font-family: 'Tinos', serif;
   color: #222;
   background: #ffffff;
-  text-transform:lowercase;
+  text-transform: capitalize;
   width: 100%;
   overflow-x: hidden;
 }
